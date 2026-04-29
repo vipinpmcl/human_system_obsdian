@@ -1,0 +1,76 @@
+{
+  "settings_version": "prior-to-2021-10-07",
+  "debug": false,
+  "working_directory": "",
+  "default_shells": {},
+  "shell_commands": {
+    "0": {
+      "id": "0",
+      "platform_specific_commands": {
+        "default": "python \"{{vault_path}}/Scripts/evaluate_cli.py\" --vault \"{{vault_path}}\""
+      },
+      "alias": "Human System: Evaluate",
+      "confirmed_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "notification",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "working_directory": "{{vault_path}}",
+      "events": {},
+      "tags": []
+    },
+    "1": {
+      "id": "1",
+      "platform_specific_commands": {
+        "default": "python \"{{vault_path}}/Scripts/graduate_cli.py\" --problem \"\" --vault \"{{vault_path}}\""
+      },
+      "alias": "Human System: Graduate Problem",
+      "confirmed_execution": true,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "notification",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "working_directory": "{{vault_path}}",
+      "events": {},
+      "tags": []
+    },
+    "2": {
+      "id": "2",
+      "platform_specific_commands": {
+        "default": "python \"{{vault_path}}/Scripts/revive_cli.py\" --problem \"\" --vault \"{{vault_path}}\""
+      },
+      "alias": "Human System: Revive Problem",
+      "confirmed_execution": true,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "notification",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "working_directory": "{{vault_path}}",
+      "events": {},
+      "tags": []
+    },
+    "3": {
+      "id": "3",
+      "platform_specific_commands": {
+        "default": "python \"{{vault_path}}/Scripts/validate_cli.py\" --vault \"{{vault_path}}\""
+      },
+      "alias": "Human System: Validate Vault",
+      "confirmed_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "notification",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "working_directory": "{{vault_path}}",
+      "events": {},
+      "tags": []
+    }
+  }
+}
